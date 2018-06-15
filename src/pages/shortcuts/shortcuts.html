@@ -1,0 +1,57 @@
+<!--
+  Generated template for the ShortcutsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Shortcut board</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="container" (keyup)="newInput(event)">
+  <ion-grid>
+    <ion-row>
+      <ion-col (click)="shortcutClicked(shortcuts[0].letter)">
+        <shortcut [sentence]="shortcuts[0].sentence" [pattern]="shortcuts[0].pattern"></shortcut>
+      </ion-col>
+      <ion-col (click)="shortcutClicked(shortcuts[1].letter)">
+        <shortcut [sentence]="shortcuts[1].sentence" [pattern]="shortcuts[1].pattern"></shortcut>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col (click)="shortcutClicked(shortcuts[2].letter)">
+        <shortcut [sentence]="shortcuts[2].sentence" [pattern]="shortcuts[2].pattern"></shortcut>
+      </ion-col>
+      <ion-col (click)="shortcutClicked(shortcuts[3].letter)">
+        <shortcut [sentence]="shortcuts[3].sentence" [pattern]="shortcuts[3].pattern"></shortcut>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col (click)="shortcutClicked(shortcuts[4].letter)">
+        <shortcut [sentence]="shortcuts[4].sentence" [pattern]="shortcuts[4].pattern"></shortcut>
+      </ion-col>
+      <ion-col (click)="shortcutClicked(shortcuts[5].letter)">
+        <shortcut [sentence]="shortcuts[5].sentence" [pattern]="shortcuts[5].pattern"></shortcut>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col (click)="shortcutClicked(shortcuts[6].letter)">
+        <shortcut [sentence]="shortcuts[6].sentence" [pattern]="shortcuts[6].pattern"></shortcut>
+      </ion-col>
+      <ion-col (click)="shortcutClicked(shortcuts[7].letter)">
+        <shortcut [sentence]="shortcuts[7].sentence" [pattern]="shortcuts[7].pattern"></shortcut>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,16 @@
+page-read-back {
+  .history {
+    height: 70vh;
+    max-height: 70vh;
+    .scroll {
+      height: 100%;
+    }
+  }
+  .input {
+    position: fixed;
+    height: 10vh;
+    input {
+      font-size: 1.4em;
+    }
+  }
+}

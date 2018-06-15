@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Choose output device</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-item-group>
+    <ion-item-divider>Available speakers</ion-item-divider>
+    <button ion-item (click)="changeActive(device.name)" *ngFor="let device of devices()">
+      <ion-icon name="checkmark-circle-outline" *ngIf="device.active"></ion-icon>
+      <ion-icon name="radio-button-off" *ngIf="!device.active"></ion-icon>
+      <span class="deviceName">{{device.name}}</span>
+    </button>
+  </ion-item-group>
+  <div class="volume">
+    <h4>Volume</h4>
+    <ion-range pin="true" min="0" max="10" step="1" snaps="true" color="secondary" [(ngModel)]="volume">
+      <ion-icon range-left name="volume-mute"></ion-icon>
+      <ion-icon range-right name="volume-up"></ion-icon>
+    </ion-range>
+  </div>
+</ion-content>

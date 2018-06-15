@@ -1,0 +1,29 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Choose input device</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-item-group>
+    <ion-item-divider>Available devices</ion-item-divider>
+    <button ion-item (click)="changeActive(device.name)" *ngFor="let device of availableDevices()">
+      <ion-icon name="checkmark-circle-outline" *ngIf="device.active"></ion-icon>
+      <ion-icon name="radio-button-off" *ngIf="!device.active"></ion-icon>
+      <span class="deviceName">{{device.name}}</span>
+    </button>
+
+    <ion-item-divider class="space-top">Unavailable devices</ion-item-divider>
+    <ion-item class="inactive-device" *ngFor="let device of unavailableDevices()">{{device.name}}</ion-item>
+  </ion-item-group>
+
+  <!-- <shortcut sentence="This is a test sentece" [pattern]="[true, true, false, false, false]"></shortcut> -->
+
+  <ion-fab right bottom>
+    <button ion-fab color="danger">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>
